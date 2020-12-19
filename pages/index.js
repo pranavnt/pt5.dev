@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Project from "./components/project.js";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -25,11 +26,29 @@ export default function Home() {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Project
+            url="https://nextjs.org/learn"
+            name="Learn"
+            description="Learn about Next.js in an interactive course with quizzes!"
+          />
 
+          <Project
+            url="https://nextjs.org/learn"
+            name="Learn"
+            description="Learn about Next.js in an interactive course with quizzes!"
+          />
+
+          <Project
+            url="https://nextjs.org/learn"
+            name="Learn"
+            description="Learn about Next.js in an interactive course with quizzes!"
+          />
+
+          <Project
+            url="https://nextjs.org/learn"
+            name="Learn"
+            description="Learn about Next.js in an interactive course with quizzes!"
+          />
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}

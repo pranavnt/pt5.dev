@@ -1,10 +1,15 @@
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
+import React from "react";
 
-const Project = (props) => {
-  return (
-    <a href={props.info.url} className={styles.card}>
-      <h3>{props.info.name}</h3>
-      <p>{props.info.description}</p>
-    </a>
-  );
-};
+export class Project extends React.Component {
+  render() {
+    return (
+      <a href={this.props.url} className={styles.card}>
+        <h3>{this.props.name}</h3>
+        <p>{this.props.description}</p>
+      </a>
+    );
+  }
+}
+
+export default Project;
