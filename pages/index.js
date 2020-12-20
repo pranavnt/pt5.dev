@@ -10,12 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div style={{ float: "left" }}>
-        <h1>Hi! I'm Pranav Teegavarapu</h1>
-      </div>
-
-      <div style={{ float: "right" }}>
-        <h2>Projects</h2>
+      <div className="projectsDiv">
+        <h2 style={{ textAlign: "center" }}>Projects</h2>
         <div className={styles.grid}>
           <Project
             url="https://github.com/kobra-dev"
