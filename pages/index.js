@@ -5,7 +5,17 @@ import { SocialIcon } from "react-social-icons";
 import { useState } from "react";
 
 export default function Home() {
-  const [selection, setSelection] = useState("projects");
+  const selectedStyle = {
+    backgroundImage: "linear-gradient(to right, #00d2ff, #3a7bd5)",
+    color: "white",
+  };
+
+  const unselectedStyle = {
+    backgroundImage: "white",
+    color: "linear-gradient(to right, #00d2ff, #3a7bd5)",
+  };
+
+  function handleSelection(selection) {}
 
   return (
     <div className={styles.container}>
@@ -14,7 +24,14 @@ export default function Home() {
         <link rel="icon" href="/chewie-pfp.png" />
       </Head>
       <div>
-        <div style={{ width: "30%", padding: "20px", paddingTop: "6%" }}>
+        <div
+          style={{
+            width: "30%",
+            padding: "20px",
+            paddingTop: "6%",
+            float: "left",
+          }}
+        >
           <img
             src="/Profile.png"
             style={{
@@ -65,57 +82,12 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="projectsDiv">
-          <h2 style={{ textAlign: "center" }}>Projects</h2>
-          <div className={styles.grid}>
-            <Project
-              url="https://github.com/kobra-dev"
-              name="Kobra 🐍"
-              description="A visual programming language (like Scratch) for machine learning"
-            />
-
-            <Project
-              url="https://github.com/OtterLang/Otter"
-              name="Otter 🦦"
-              description="A programming language built for speed, readability, and ergonomics"
-            />
-
-            <Project
-              url="https://github.com/pranavnt/Walla"
-              name="Walla 🦘"
-              description="Walla is an intuitive, fast web framework for building APIs in Node"
-            />
-
-            <Project
-              url="https://github.com/pranavnt/pt5.dev"
-              name="pt5.dev 💻"
-              description="My personal website (What you're looking at right now)!"
-            />
-
-            <Project
-              url="https://devpost.com/software/Simplitize"
-              name="Simplitize 📖"
-              description="Using NLP-powered Question Answering to help users understand academic literature"
-            />
-
-            <Project
-              url="https://devpost.com/software/PhishingNet"
-              name="PhishingNet 🎣"
-              description="NLP-powered chrome extension to detect phishing websites"
-            />
-
-            <Project
-              url="https://github.com/pranavnt/Diffcheckr"
-              name="Diffcheckr ✅"
-              description="Minimal, intuitive diffchecker for comparing your output to test cases"
-            />
-
-            <Project
-              url="https://github.com/pranavnt"
-              name="GitHub 🔧"
-              description="Check out my GitHub to see any other projects I'm working on!"
-            />
-          </div>
+        <div className="projectsDiv" style={{ padding: "2%" }}>
+          <table style={{ width: "70%" }}>
+            <td>Projects</td>
+            <td>Experience</td>
+            <td>Skills</td>
+          </table>
         </div>
       </div>
       <footer className={styles.footer}>
