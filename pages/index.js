@@ -106,11 +106,6 @@ export default function Home() {
                   ).style.backgroundImage = null;
                   document.getElementById("experiences").style.color = "black";
 
-                  document.getElementById(
-                    "skills"
-                  ).style.backgroundImage = null;
-                  document.getElementById("skills").style.color = "black";
-
                   setContent(projects);
                   console.log(content);
                 }}
@@ -129,39 +124,12 @@ export default function Home() {
                     "linear-gradient(to right, #00d2ff, #3a7bd5)";
                   document.getElementById("experiences").style.color = "white";
 
-                  document.getElementById(
-                    "skills"
-                  ).style.backgroundImage = null;
-                  document.getElementById("skills").style.color = "black";
-
                   setContent(experiences);
                   console.log(content);
                 }}
                 id="experiences"
               >
                 Experience
-              </td>
-              <td
-                onClick={() => {
-                  document.getElementById(
-                    "projects"
-                  ).style.backgroundImage = null;
-                  document.getElementById("projects").style.color = "black";
-
-                  document.getElementById(
-                    "experiences"
-                  ).style.backgroundImage = null;
-                  document.getElementById("experiences").style.color = "black";
-
-                  document.getElementById("skills").style.backgroundImage =
-                    "linear-gradient(to right, #00d2ff, #3a7bd5)";
-                  document.getElementById("skills").style.color = "white";
-
-                  setContent(skills);
-                }}
-                id="skills"
-              >
-                Skills
               </td>
             </tr>
           </table>
