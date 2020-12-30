@@ -47,3 +47,11 @@
   padding-top: "6%";
   float: "left";
 }
+
+#projects:hover #projects:active #projects:focus {
+  color: white !important;
+}
+
+#experiences:hover #experiences:active #experiences:focus {
+  color: white !important;
+}
