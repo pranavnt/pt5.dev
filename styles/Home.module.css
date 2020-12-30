@@ -48,10 +48,10 @@
   float: "left";
 }
 
-#projects:hover #projects:active #projects:focus {
+#projects td:hover {
   color: white !important;
 }
 
-#experiences:hover #experiences:active #experiences:focus {
+#experiences td:hover {
   color: white !important;
 }

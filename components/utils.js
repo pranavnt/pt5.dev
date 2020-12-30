@@ -54,10 +54,18 @@ export const experiences = [
           Founded Kobra, a visual programming language for Machine Learning
         </li>
         <li>
-          Worked on the frontend in Next.js + TypeScript and the backend in
-          TypeScript + GraphQL
+          Worked on the frontend in React (now Next.js) + TypeScript and the
+          backend in TypeScript + GraphQL
         </li>
-        <li></li>
+        <li>
+          Created ML framework for JavaScript (similar to sklearn in Python)
+        </li>
+        <li>
+          Check out our codebase{" "}
+          <a href="https://github.com/kobra-dev" target="_blank">
+            here
+          </a>{" "}
+        </li>
       </ul>
     }
   />,
