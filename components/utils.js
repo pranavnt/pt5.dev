@@ -57,10 +57,11 @@ export const experiences = [
           Worked on the frontend in Next.js + TypeScript and the backend in
           TypeScript + GraphQL
         </li>
+        <li></li>
       </ul>
     }
   />,
-  <Project
+  <Experience
     url="https://brainsquall.co"
     name="Data Analytics and Web Development Intern @ BrainSquall "
     description={
@@ -89,3 +90,5 @@ export const experiences = [
     }
   />,
 ];
+
+export const skills = [<p></p>];

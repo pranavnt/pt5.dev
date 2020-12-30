@@ -3,7 +3,7 @@ import Project from "../components/project.js";
 import styles from "../styles/Home.module.css";
 import { SocialIcon } from "react-social-icons";
 import { useReducer, useState } from "react";
-import { projects, experiences } from "../components/utils.js";
+import { projects, experiences, skills } from "../components/utils.js";
 
 export default function Home() {
   const [content, setContent] = useState(projects);
@@ -11,11 +11,6 @@ export default function Home() {
   const selectedStyle = {
     backgroundImage: "linear-gradient(to right, #00d2ff, #3a7bd5)",
     color: "white",
-  };
-
-  const unselectedStyle = {
-    backgroundImage: "white",
-    color: "linear-gradient(to right, #00d2ff, #3a7bd5)",
   };
 
   function handleSelection(selection) {
@@ -64,8 +59,9 @@ export default function Home() {
                 display: "block",
               }}
             >
-              Hey! I'm Pranav, a 15 year old passionate about full stack
-              development, machine learning, and entrepreneurship!
+              Hey! I'm Pranav, a 15 year old high school student passionate
+              about full stack development, machine learning, and
+              entrepreneurship!
             </p>
             <br />
           </div>
@@ -160,6 +156,8 @@ export default function Home() {
                   document.getElementById("skills").style.backgroundImage =
                     "linear-gradient(to right, #00d2ff, #3a7bd5)";
                   document.getElementById("skills").style.color = "white";
+
+                  setContent(skills);
                 }}
                 id="skills"
               >
@@ -167,7 +165,7 @@ export default function Home() {
               </td>
             </tr>
           </table>
-          <div style={{ padding: "1%", height: "80vh", overflow: "scroll" }}>
+          <div style={{ padding: "1%", height: "75vh", overflow: "scroll" }}>
             {content}
           </div>
         </div>
