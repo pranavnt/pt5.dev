@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import React from "react";
 
 export class Project extends React.Component {
