@@ -96,7 +96,19 @@ export default function Home() {
             <tr>
               <td
                 onClick={() => {
-                  console.log("p");
+                  document.getElementById("projects").style.backgroundImage =
+                    "linear-gradient(to right, #00d2ff, #3a7bd5)";
+                  document.getElementById("projects").style.color = "white";
+
+                  document.getElementById(
+                    "experiences"
+                  ).style.backgroundImage = null;
+                  document.getElementById("experiences").style.color = "black";
+
+                  document.getElementById(
+                    "skills"
+                  ).style.backgroundImage = null;
+                  document.getElementById("skills").style.color = "black";
                 }}
                 id="projects"
               >
@@ -104,7 +116,19 @@ export default function Home() {
               </td>
               <td
                 onClick={() => {
-                  console.log("e");
+                  document.getElementById(
+                    "projects"
+                  ).style.backgroundImage = null;
+                  document.getElementById("projects").style.color = "black";
+
+                  document.getElementById("experiences").style.backgroundImage =
+                    "linear-gradient(to right, #00d2ff, #3a7bd5)";
+                  document.getElementById("experiences").style.color = "white";
+
+                  document.getElementById(
+                    "skills"
+                  ).style.backgroundImage = null;
+                  document.getElementById("skills").style.color = "black";
                 }}
                 id="experiences"
               >
@@ -112,11 +136,19 @@ export default function Home() {
               </td>
               <td
                 onClick={() => {
+                  document.getElementById(
+                    "projects"
+                  ).style.backgroundImage = null;
+                  document.getElementById("projects").style.color = "black";
+
+                  document.getElementById(
+                    "experiences"
+                  ).style.backgroundImage = null;
+                  document.getElementById("experiences").style.color = "black";
+
                   document.getElementById("skills").style.backgroundImage =
                     "linear-gradient(to right, #00d2ff, #3a7bd5)";
-
-                  document.getElementById("skills").style = selectedStyle;
-                  console.log(document.getElementById("skills").style);
+                  document.getElementById("skills").style.color = "white";
                 }}
                 id="skills"
               >
