@@ -2,7 +2,6 @@ import Head from "next/head";
 import Project from "../components/project.js";
 import styles from "../styles/Home.module.css";
 import { SocialIcon } from "react-social-icons";
-import { useState } from "react";
 
 export default function Home() {
   const selectedStyle = {
@@ -15,7 +14,15 @@ export default function Home() {
     color: "linear-gradient(to right, #00d2ff, #3a7bd5)",
   };
 
-  function handleSelection(selection) {}
+  function handleSelection(selection) {
+    if (selection == "projects") {
+      console.log("projects");
+    } else if (selection == "experiences") {
+      console.log("experiences");
+    } else if (selection == "skills") {
+      console.log("skills");
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -42,6 +49,7 @@ export default function Home() {
             }}
           />
           <div style={{ paddingBottom: "0px" }}>
+            <br />
             <p
               style={{
                 marginLeft: "auto",
@@ -53,11 +61,9 @@ export default function Home() {
               }}
             >
               Hey! I'm Pranav, a 15 year old passionate about full stack
-              development, ML, and entrepreneurship. I'm a hacker at heart, and
-              love building side projects in my spare time, and have attended
-              over a dozen hackathons to date! You can find me on the internet
-              on any of the platforms below :)
+              development, machine learning, and entrepreneurship!
             </p>
+            <br />
           </div>
           <div style={{ textAlign: "center" }}>
             <SocialIcon
@@ -82,12 +88,91 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="projectsDiv" style={{ padding: "2%" }}>
-          <table style={{ width: "70%" }}>
-            <td>Projects</td>
-            <td>Experience</td>
-            <td>Skills</td>
+        <div
+          className="projectsDiv"
+          style={{ padding: "2%", width: "70%", float: "right" }}
+        >
+          <table style={{ width: "100%" }}>
+            <tr>
+              <td
+                onClick={() => {
+                  console.log("p");
+                }}
+                id="projects"
+              >
+                Projects
+              </td>
+              <td
+                onClick={() => {
+                  console.log("e");
+                }}
+                id="experiences"
+              >
+                Experience
+              </td>
+              <td
+                onClick={() => {
+                  document.getElementById("skills").style.backgroundImage =
+                    "linear-gradient(to right, #00d2ff, #3a7bd5)";
+
+                  document.getElementById("skills").style = selectedStyle;
+                  console.log(document.getElementById("skills").style);
+                }}
+                id="skills"
+              >
+                Skills
+              </td>
+            </tr>
           </table>
+          <div style={{ padding: "1%", height: "80vh", overflow: "scroll" }}>
+            <Project
+              url="https://github.com/kobra-dev"
+              name="Kobra 🐍"
+              description="A visual programming language (like Scratch) for machine learning"
+            />
+
+            <Project
+              url="https://github.com/OtterLang/Otter"
+              name="Otter 🦦"
+              description="A programming language built for speed, readability, and ergonomics"
+            />
+
+            <Project
+              url="https://github.com/pranavnt/Walla"
+              name="Walla 🦘"
+              description="Walla is an intuitive, fast web framework for building APIs in Node"
+            />
+
+            <Project
+              url="https://github.com/pranavnt/pt5.dev"
+              name="pt5.dev 💻"
+              description="My personal website (What you're looking at right now)!"
+            />
+
+            <Project
+              url="https://devpost.com/software/Simplitize"
+              name="Simplitize 📖"
+              description="Using NLP-powered Question Answering to help users understand academic literature"
+            />
+
+            <Project
+              url="https://devpost.com/software/PhishingNet"
+              name="PhishingNet 🎣"
+              description="NLP-powered chrome extension to detect phishing websites"
+            />
+
+            <Project
+              url="https://github.com/pranavnt/Diffcheckr"
+              name="Diffcheckr ✅"
+              description="Minimal, intuitive diffchecker for comparing your output to test cases"
+            />
+
+            <Project
+              url="https://github.com/pranavnt"
+              name="GitHub 🔧"
+              description="Check out my GitHub to see any other projects I'm working on!"
+            />
+          </div>
         </div>
       </div>
       <footer className={styles.footer}>
