@@ -2,9 +2,12 @@ import Head from "next/head";
 import Project from "../components/project.js";
 import styles from "../styles/Home.module.css";
 import { SocialIcon } from "react-social-icons";
-import { useState } from "react";
+import { useReducer, useState } from "react";
+import { projects, experiences } from "../components/utils.js";
 
 export default function Home() {
+  const [content, setContent] = useState(projects);
+
   const selectedStyle = {
     backgroundImage: "linear-gradient(to right, #00d2ff, #3a7bd5)",
     color: "white",
@@ -111,6 +114,9 @@ export default function Home() {
                     "skills"
                   ).style.backgroundImage = null;
                   document.getElementById("skills").style.color = "black";
+
+                  setContent(projects);
+                  console.log(content);
                 }}
                 id="projects"
               >
@@ -131,6 +137,9 @@ export default function Home() {
                     "skills"
                   ).style.backgroundImage = null;
                   document.getElementById("skills").style.color = "black";
+
+                  setContent(experiences);
+                  console.log(content);
                 }}
                 id="experiences"
               >
@@ -159,17 +168,7 @@ export default function Home() {
             </tr>
           </table>
           <div style={{ padding: "1%", height: "80vh", overflow: "scroll" }}>
-            {" "}
-            <Project
-              url="https://github.com/kobra-dev"
-              name="Kobra 🐍"
-              description="A visual programming language (like Scratch) for machine learning"
-            />
-            <Project
-              url="https://github.com/OtterLang/Otter"
-              name="Otter 🦦"
-              description="A programming language built for speed, readability, and ergonomics"
-            />
+            {content}
           </div>
         </div>
       </div>
