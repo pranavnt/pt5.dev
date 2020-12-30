@@ -90,5 +90,3 @@ export const experiences = [
     }
   />,
 ];
-
-export const skills = [<p></p>];

@@ -3,7 +3,7 @@ import Project from "../components/project.js";
 import styles from "../styles/Home.module.css";
 import { SocialIcon } from "react-social-icons";
 import { useReducer, useState } from "react";
-import { projects, experiences, skills } from "../components/utils.js";
+import { projects, experiences } from "../components/utils.js";
 
 export default function Home() {
   const [content, setContent] = useState(projects);
@@ -12,16 +12,6 @@ export default function Home() {
     backgroundImage: "linear-gradient(to right, #00d2ff, #3a7bd5)",
     color: "white",
   };
-
-  function handleSelection(selection) {
-    if (selection == "projects") {
-      console.log("projects");
-    } else if (selection == "experiences") {
-      console.log("experiences");
-    } else if (selection == "skills") {
-      console.log("skills");
-    }
-  }
 
   return (
     <div className={styles.container}>
