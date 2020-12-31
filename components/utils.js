@@ -7,6 +7,26 @@ export const projects = [
     name="Kobra 🐍"
     description="A visual programming language (like Scratch) for machine learning"
   />,
+   <Project
+    url="https://github.com/pranavnt/Conch"
+    name="Conch 🐚"
+    description="Store your shell scripts in the cloud and run them anywhere!"
+  />,
+  <Project
+    url="https://github.com/pranavnt/pt5.dev"
+    name="pt5.dev 💻"
+    description="My personal website (What you're looking at right now)!"
+  />,
+  <Project
+    url="https://github.com/pranavnt/blog"
+    name="Blog 📝"
+    description="A minimalistic markdown blog built in Next.js"
+  />,  
+  <Project
+    url="https://github.com/pranavnt/Walla"
+    name="Walla 🦘"
+    description="Walla is an intuitive, fast web framework for building APIs in Node"
+  />,
   <Project
     url="https://github.com/OtterLang/Otter"
     name="Otter 🦦"
@@ -16,11 +36,6 @@ export const projects = [
     url="https://github.com/pranavnt/Walla"
     name="Walla 🦘"
     description="Walla is an intuitive, fast web framework for building APIs in Node"
-  />,
-  <Project
-    url="https://github.com/pranavnt/pt5.dev"
-    name="pt5.dev 💻"
-    description="My personal website (What you're looking at right now)!"
   />,
   <Project
     url="https://devpost.com/software/Simplitize"
